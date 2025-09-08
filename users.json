@@ -5,49 +5,23 @@
     "password": "123456",
     "admin": true,
     "orders": [
-      {
-        "orderId": "E0BO",
-        "product": {
-          "id": "1",
-          "name": "tyre",
-          "price": 44,
-          "description": "car tyre",
-          "quantity": 2
-        },
-        "status": "pending"
-      }
+     
     ],
-    "notifications": [
-      "Order E0BO for tyre is pending admin approval."
-    ]
+    "notifications": []
   },
   "nen": {
     "name": "nen",
     "email": "nen@gmail.com",
     "password": "123456",
     "admin": false,
-    "orders": [],
+    "orders": [
+     
+    ],
     "notifications": []
   },
   "king": {
     "name": "colin",
     "email": "lapshakjj2@gmail.com",
-    "password": "1234",
-    "admin": false,
-    "orders": [],
-    "notifications": []
-  },
-  " 333 ": {
-    "name": " www",
-    "email": " lapshakjj2@gmail.com",
-    "password": "1234",
-    "admin": false,
-    "orders": [],
-    "notifications": []
-  },
-  " ertyy": {
-    "name": " eee",
-    "email": " lapshakjj2@gmail.com",
     "password": "1234",
     "admin": false,
     "orders": [],

@@ -54,9 +54,9 @@ const userSchema = Joi.object({
     .max(30)
     .required()
     .trim()
-    .pattern(/^(?!\s)(?!.*\s$).+$/, { name: 'no-leading-or-trailing-space' })
+    .pattern(/^(?!\s)(?!.*\s$)[A-Za-z\s]+$/, { name: 'letters-and-spaces-no-leading-or-trailing-space' })
     .messages({
-      'string.pattern.name': 'Name must not start or end with a space.',
+      'string.pattern.name': 'Name must only contain letters and spaces, and must not start or end with a space.',
       'string.empty': 'Name cannot be empty.',
     }),
   username: Joi.string()
@@ -66,8 +66,9 @@ const userSchema = Joi.object({
     .required()
     .trim()
     .pattern(/^(?!\s)(?!.*\s$).+$/, { name: 'no-leading-or-trailing-space' })
+    .pattern(/[a-zA-Z]/, { name: 'must-contain-letter' }) // must contain at least one letter
     .messages({
-      'string.pattern.name': 'Username must not start or end with a space.',
+      'string.pattern.name': 'Username must not start or end with a space and must contain at least one letter.',
       'string.empty': 'Username cannot be empty.',
     }),
   email: Joi.string()

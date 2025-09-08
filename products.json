@@ -4,6 +4,13 @@
     "name": "tyre",
     "price": 44,
     "description": "car tyre",
-    "quantity": 2
+    "quantity": 0
+  },
+  {
+    "id": "2",
+    "name": "moi moi",
+    "price": 11,
+    "description": "hot moi moi",
+    "quantity": 1
   }
 ]
