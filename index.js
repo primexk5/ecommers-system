@@ -50,14 +50,14 @@ function prompt(question) {
 
 const userSchema = Joi.object({
   name: Joi.string().min(3).max(30).required(),
-  username: Joi.string().alphanum().min(3).max(30).required(),
-  email: Joi.string().email().required(),
+  username: Joi.string().alphanum().min(3).max(30).required().trim(),
+  email: Joi.string().email({ tlds: { allow: ['com', 'org', 'ng'] } }).required().trim(),
   password: Joi.string().min(6).required(),
 });
 
 
+
 function generateOrderId() {
-  // Generates a random 4-character alphanumeric string
   return Math.random().toString(36).substr(2, 4).toUpperCase();
 }
 
@@ -319,7 +319,7 @@ async function searchOrderById(username) {
   }
 }
 
-// Admin-only function to add products
+// Admin function to add products
 async function addProducts() {
   const name = await prompt("Enter product name: ");
   const price = await prompt("Enter product price: ");
@@ -396,7 +396,7 @@ async function seeALlOders(){
   });
 }
 
-// Admin: Approve orders
+// Admin  Approve orders
 async function approveOrders() {
   const users = await readData(usersPath);
   if (users === null) return; 
