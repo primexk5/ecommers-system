@@ -1,0 +1,9 @@
+[
+  {
+    "id": "1",
+    "name": "tire",
+    "price": 44,
+    "description": "car tyre",
+    "quantity": 3
+  }
+]

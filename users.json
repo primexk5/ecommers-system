@@ -1,0 +1,18 @@
+{
+  "newk": {
+    "name": "newking",
+    "email": "lalalalal@gmail.com",
+    "password": "123456",
+    "admin": true,
+    "orders": [],
+    "notifications": []
+  },
+  "nen": {
+    "name": "nen",
+    "email": "nen@gmail.com",
+    "password": "123456",
+    "admin": false,
+    "orders": [],
+    "notifications": []
+  }
+}
