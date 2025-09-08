@@ -4,8 +4,22 @@
     "email": "lalalalal@gmail.com",
     "password": "123456",
     "admin": true,
-    "orders": [],
-    "notifications": []
+    "orders": [
+      {
+        "orderId": "E0BO",
+        "product": {
+          "id": "1",
+          "name": "tyre",
+          "price": 44,
+          "description": "car tyre",
+          "quantity": 2
+        },
+        "status": "pending"
+      }
+    ],
+    "notifications": [
+      "Order E0BO for tyre is pending admin approval."
+    ]
   },
   "nen": {
     "name": "nen",
