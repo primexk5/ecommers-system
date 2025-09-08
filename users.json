@@ -28,5 +28,29 @@
     "admin": false,
     "orders": [],
     "notifications": []
+  },
+  "king": {
+    "name": "colin",
+    "email": "lapshakjj2@gmail.com",
+    "password": "1234",
+    "admin": false,
+    "orders": [],
+    "notifications": []
+  },
+  " 333 ": {
+    "name": " www",
+    "email": " lapshakjj2@gmail.com",
+    "password": "1234",
+    "admin": false,
+    "orders": [],
+    "notifications": []
+  },
+  " ertyy": {
+    "name": " eee",
+    "email": " lapshakjj2@gmail.com",
+    "password": "1234",
+    "admin": false,
+    "orders": [],
+    "notifications": []
   }
 }

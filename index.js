@@ -49,10 +49,46 @@ function prompt(question) {
 
 
 const userSchema = Joi.object({
-  name: Joi.string().min(3).max(30).required(),
-  username: Joi.string().alphanum().min(3).max(30).required().trim(),
-  email: Joi.string().email({ tlds: { allow: ['com', 'org', 'ng'] } }).required().trim(),
-  password: Joi.string().min(4).max(6).required(),
+  name: Joi.string()
+    .min(3)
+    .max(30)
+    .required()
+    .trim()
+    .pattern(/^(?!\s)(?!.*\s$).+$/, { name: 'no-leading-or-trailing-space' })
+    .messages({
+      'string.pattern.name': 'Name must not start or end with a space.',
+      'string.empty': 'Name cannot be empty.',
+    }),
+  username: Joi.string()
+    .alphanum()
+    .min(3)
+    .max(30)
+    .required()
+    .trim()
+    .pattern(/^(?!\s)(?!.*\s$).+$/, { name: 'no-leading-or-trailing-space' })
+    .messages({
+      'string.pattern.name': 'Username must not start or end with a space.',
+      'string.empty': 'Username cannot be empty.',
+    }),
+  email: Joi.string()
+    .email({ tlds: { allow: ['com', 'org', 'ng'] } })
+    .required()
+    .trim()
+    .pattern(/^(?!\s)(?!.*\s$).+$/, { name: 'no-leading-or-trailing-space' })
+    .messages({
+      'string.pattern.name': 'Email must not start or end with a space.',
+      'string.empty': 'Email cannot be empty.',
+    }),
+  password: Joi.string()
+    .min(4)
+    .max(6)
+    .required()
+    .trim()
+    .pattern(/^(?!\s)(?!.*\s$).+$/, { name: 'no-leading-or-trailing-space' })
+    .messages({
+      'string.pattern.name': 'Password must not start or end with a space.',
+      'string.empty': 'Password cannot be empty.',
+    }),
 });
 
 
